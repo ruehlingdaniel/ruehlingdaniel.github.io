@@ -105,7 +105,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="contact" class="content-section bg-light">
             <div class="container">
                 <h2>Kontaktieren Sie uns</h2>
@@ -113,27 +113,41 @@
                 <div class="contact-wrapper">
                     <div class="contact-info">
                         <h3>zfslab.de</h3>
-                        <p><i class="fas fa-user"></i> Daniel Rühling</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Bahnhofstrasse 5a, 76879 Hochstadt</p>
-                        <p><i class="fas fa-phone"></i> <a href="tel:+491757568789">0175 7568 789</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@zfslab.de">daniel@ruehling.me</a></p>
+                        <p><i class="fas fa-user"></i> Ihr Name</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ihre Straße & Hausnummer, PLZ Ort</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+49123456789">Ihre Telefonnummer</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@zfslab.de">info@zfslab.de</a></p>
                     </div>
-                    <form action="https://formspree.io/f/xandkelg" method="POST" class="contact-form">
-                        <input type="text" name="name" placeholder="Ihr Name" required>
-                        <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-                        <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-                        <button type="submit" class="cta-button">Nachricht senden</button>
-                    </form>
-            
+                    <div id="contact-form-placeholder" class="contact-form">
+                        <div class="form-consent-notice">
+                            <p>Bitte akzeptieren Sie die Cookies, um das Kontaktformular zu laden.</p>
+                            <button id="accept-cookies-for-form" class="cta-button">Cookies für Formular akzeptieren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
+         <div class="container">
             <p>&copy; 2024 zfslab.de | Alle Rechte vorbehalten.</p>
             <p><a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Datenschutz</a></p>
         </div>
     </footer>
+
+    <div id="cookie-banner">
+        <div class="cookie-banner-content">
+            <p>
+                Wir verwenden Cookies, um die Funktionalität unserer Webseite zu gewährleisten. Für das Kontaktformular nutzen wir den Dienst Formspree, der möglicherweise eigene Cookies setzt.
+                <a href="/datenschutz.html" target="_blank">Mehr in der Datenschutzerklärung</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+                <button id="cookie-accept">Akzeptieren</button>
+                <button id="cookie-decline">Nur notwendige</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
