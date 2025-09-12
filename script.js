@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const acceptForFormButton = document.getElementById('accept-cookies-for-form');
 
     // WICHTIG: Ersetzen Sie dies mit Ihrer Formspree ID
-    const formspreeId = 'YOUR_FORM_ID';
+    const formspreeId = 'xandkelg';
 
     const loadContactForm = () => {
         formPlaceholder.innerHTML = `
