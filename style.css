@@ -1,10 +1,13 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #343a40;
-    --light-color: #f8f9fa;
-    --text-color: #333;
-    --white-color: #fff;
-    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    --primary-color: #007aff; /* Ein klares, frisches Blau */
+    --secondary-color: #333333; /* Dunkleres Grau für Text und Footer */
+    --light-color: #f5f5f7; /* Sehr helles Grau, fast Weiß */
+    --text-color: #333333;
+    --white-color: #ffffff;
+    --border-color: #e0e0e0; /* Dezente Grenzlinien */
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.08); /* Sehr leichter Schatten */
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtiler, weicherer Schatten */
+    --border-radius: 8px; /* Einheitliche Abrundung */
 }
 
 * {
@@ -21,19 +24,20 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--light-color); /* Hintergrundfarbe für die ganze Seite */
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px; /* Etwas schmaler für eleganteres Layout */
     margin: auto;
     overflow: hidden;
-    padding: 0 2rem;
+    padding: 0 1.5rem; /* Weniger Padding für mehr Seitenabstand */
 }
 
 /* Header & Navigation */
 header {
     background: var(--white-color);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-light);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -43,11 +47,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem; /* Angepasstes Padding */
 }
 
 .logo a {
-    font-size: 1.5rem;
+    font-size: 1.6rem; /* Leicht vergrößert */
     font-weight: 700;
     color: var(--secondary-color);
     text-decoration: none;
@@ -59,24 +63,25 @@ nav {
 }
 
 .nav-links li {
-    padding-left: 20px;
+    padding-left: 30px; /* Mehr Abstand zwischen Links */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: 400;
-    transition: color 0.3s ease;
+    color: var(--text-color); /* Angepasste Textfarbe */
+    font-weight: 400; /* Leichteres Gewicht */
+    transition: color 0.3s ease, transform 0.2s ease; /* Übergang für Hover-Effekt */
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
+    transform: translateY(-2px); /* Leichter Anhebe-Effekt */
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?server,network') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?datacenter,cloud') no-repeat center center/cover; /* Neues Hintergrundbild */
     color: var(--white-color);
     display: flex;
     justify-content: center;
@@ -86,36 +91,45 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Größerer, auffälligerer Titel */
     margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Leichtes Kerning */
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
+    font-size: 1.3rem; /* Etwas größer */
+    max-width: 650px; /* Etwas breiter */
+    margin: 0 auto 2.5rem auto; /* Mehr Abstand */
+    font-weight: 300; /* Leichteres Gewicht */
+    opacity: 0.9;
 }
 
 .cta-button {
     display: inline-block;
     background: var(--primary-color);
     color: var(--white-color);
-    padding: 12px 24px;
+    padding: 14px 28px; /* Größerer Button */
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
+    border-radius: var(--border-radius); /* Abgerundete Ecken */
+    font-weight: 600; /* Mittleres Gewicht */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3); /* Dezenter Schatten */
 }
 
 .cta-button:hover {
-    background: #0056b3;
+    background: #006aff; /* Dunkleres Blau beim Hover */
+    transform: translateY(-3px); /* Leichter Anhebe-Effekt */
+    box-shadow: 0 6px 15px rgba(0, 122, 255, 0.4);
 }
 
 /* Content Sections */
 .content-section {
-    padding: 6rem 0;
+    padding: 7rem 0; /* Mehr vertikaler Abstand */
+    position: relative;
+    overflow: hidden;
 }
 
 .bg-light {
@@ -123,113 +137,153 @@ nav {
 }
 
 .content-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* Größerer Titel */
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 3rem;
+    font-size: 1.2rem; /* Etwas größer */
+    color: #6a6a6a; /* Dunkleres Grau */
+    margin-bottom: 4rem; /* Mehr Abstand */
+    font-weight: 300;
 }
 
 /* About Section */
 .about-content {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem; /* Mehr Abstand */
 }
 .about-text {
     flex: 2;
+    font-size: 1.1rem; /* Etwas größere Schrift */
+    line-height: 1.8;
 }
 .about-text p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 .about-image {
     flex: 1;
     text-align: center;
     color: var(--primary-color);
+    opacity: 0.8;
 }
 
 /* Services Section */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Angepasste Grid-Größe */
+    gap: 2.5rem; /* Mehr Abstand */
 }
 
 .service-card {
     background: var(--white-color);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
+    padding: 2.5rem; /* Mehr Padding */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium); /* Weicherer Schatten */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color); /* Dezenter Rahmen */
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: translateY(-5px); /* Weniger starkes Anheben */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Etwas stärkerer Schatten beim Hover */
 }
 
 .service-icon {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Größer */
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem; /* Mehr Abstand */
 }
 
 .service-card h3 {
     margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.4rem; /* Etwas größer */
+}
+
+.service-card p {
+    font-weight: 300;
+    color: #555;
 }
 
 /* Why Us Section */
 .why-us-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem; /* Mehr Abstand */
     text-align: center;
 }
 
 .why-us-item i {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Größer */
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.8;
 }
 
 .why-us-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem; /* Etwas größer */
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+.why-us-item p {
+    font-weight: 300;
+    color: #555;
 }
 
 /* Contact Section */
 .contact-wrapper {
     display: flex;
-    gap: 2rem;
+    gap: 3rem; /* Mehr Abstand */
     background: var(--white-color);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
+    padding: 3rem; /* Mehr Padding */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--border-color);
 }
 .contact-info {
     flex: 1;
+    line-height: 2; /* Bessere Lesbarkeit */
 }
 .contact-info h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Mehr Abstand */
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--secondary-color);
 }
 .contact-info p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem; /* Größer */
     display: flex;
     align-items: center;
+    color: #555;
 }
+.contact-info strong {
+    min-width: 70px; /* Für bessere Ausrichtung */
+    display: inline-block;
+    font-weight: 500;
+}
+
 .contact-info i {
     color: var(--primary-color);
-    margin-right: 10px;
+    margin-right: 12px;
+    font-size: 1.2rem;
+    opacity: 0.8;
 }
 .contact-info a {
     text-decoration: none;
     color: var(--text-color);
+    transition: color 0.3s ease;
+}
+.contact-info a:hover {
+    color: var(--primary-color);
 }
 
 .contact-form {
@@ -241,18 +295,27 @@ nav {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 12px 15px; /* Mehr Padding */
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px; /* Leichte Abrundung */
     font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2); /* Fokus-Ring */
 }
 
 .form-notice {
     text-align: center;
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #555;
+    color: #777;
 }
 .form-notice a {
     color: var(--primary-color);
@@ -263,12 +326,15 @@ footer {
     background: var(--secondary-color);
     color: var(--white-color);
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 0; /* Mehr Padding */
+    font-size: 0.95rem;
+    opacity: 0.9;
 }
 
 footer a {
-    color: var(--white-color);
+    color: #a7d1ff; /* Helles Blau für Links */
     text-decoration: none;
+    transition: text-decoration 0.3s ease;
 }
 footer a:hover {
     text-decoration: underline;
@@ -281,14 +347,15 @@ footer a:hover {
 }
 
 .burger div {
-    width: 25px;
+    width: 28px; /* Etwas größer */
     height: 3px;
     background-color: var(--secondary-color);
-    margin: 5px;
+    margin: 6px; /* Mehr Abstand */
     transition: all 0.3s ease;
+    border-radius: 2px;
 }
 
-/* Cookie Banner & Form Placeholder */
+/* Cookie Banner & Form Placeholder - Angepasst für Apple Style */
 #cookie-banner {
     position: fixed;
     bottom: 0;
@@ -296,36 +363,52 @@ footer a:hover {
     width: 100%;
     background-color: var(--secondary-color);
     color: var(--white-color);
-    padding: 1rem;
+    padding: 1.2rem; /* Etwas mehr Padding */
     box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
     z-index: 2000;
     display: none; /* Wird per JS angezeigt */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Dezente Trennlinie */
 }
 
 .cookie-banner-content {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem; /* Mehr Abstand */
 }
 
 .cookie-banner-content p {
     margin: 0;
+    font-size: 0.95rem; /* Etwas größer */
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
 .cookie-banner-content a {
-    color: #a7d1ff;
+    color: #c0e0ff; /* Helleres Blau für Links im Banner */
     text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.cookie-banner-content a:hover {
+    opacity: 0.8;
+}
+
+.cookie-banner-buttons {
+    display: flex;
+    gap: 0.8rem; /* Abstand zwischen Buttons */
 }
 
 .cookie-banner-buttons button {
-    padding: 8px 16px;
+    padding: 10px 20px; /* Angepasste Button-Größe */
     border: none;
-    border-radius: 5px;
+    border-radius: 6px; /* Leichte Abrundung */
     cursor: pointer;
-    margin-left: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #cookie-accept {
@@ -333,9 +416,19 @@ footer a:hover {
     color: var(--white-color);
 }
 
+#cookie-accept:hover {
+    background-color: #006aff;
+    transform: translateY(-2px);
+}
+
 #cookie-decline {
-    background-color: #6c757d;
+    background-color: #6c757d; /* Dunkelgrau */
     color: var(--white-color);
+}
+
+#cookie-decline:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
 }
 
 .form-consent-notice {
@@ -344,15 +437,21 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem;
-    border: 2px dashed #ccc;
-    border-radius: 5px;
+    padding: 3rem; /* Mehr Padding */
+    border: 2px dashed var(--border-color); /* Dezenter gestrichelter Rahmen */
+    border-radius: var(--border-radius);
     height: 100%;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-light);
+    color: #6a6a6a;
 }
 
 #accept-cookies-for-form {
-    margin-top: 1rem;
+    margin-top: 1.5rem; /* Mehr Abstand */
+    padding: 12px 24px; /* Angepasste Größe */
+    font-size: 1rem;
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -361,7 +460,7 @@ footer a:hover {
         text-align: center;
     }
     .cookie-banner-buttons {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
     
     .nav-links {
@@ -376,6 +475,8 @@ footer a:hover {
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        box-shadow: var(--shadow-medium);
+        border-left: 1px solid var(--border-color);
     }
     .nav-links li {
         opacity: 0;
@@ -410,14 +511,42 @@ footer a:hover {
     }
 
     .hero-content h1 {
+        font-size: 2.5rem; /* Angepasste Größe für Mobile */
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .content-section h2 {
         font-size: 2.2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
     }
 
     .about-content {
         flex-direction: column;
+        gap: 2rem;
+    }
+    .about-image {
+        order: -1; /* Bild nach oben */
+        margin-bottom: 2rem;
     }
     
     .contact-wrapper {
         flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    .contact-info p {
+        flex-direction: column; /* Stapelt Icons und Text */
+        align-items: flex-start;
+    }
+    .contact-info strong {
+        min-width: unset;
+        margin-bottom: 5px;
+    }
+    .contact-info i {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 }
