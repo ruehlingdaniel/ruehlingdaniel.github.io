@@ -1,0 +1,358 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');\
+\
+:root \{\
+    --primary-color: #007bff;\
+    --secondary-color: #343a40;\
+    --light-color: #f8f9fa;\
+    --text-color: #333;\
+    --white-color: #fff;\
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);\
+\}\
+\
+* \{\
+    margin: 0;\
+    padding: 0;\
+    box-sizing: border-box;\
+\}\
+\
+html \{\
+    scroll-behavior: smooth;\
+\}\
+\
+body \{\
+    font-family: 'Roboto', sans-serif;\
+    line-height: 1.6;\
+    color: var(--text-color);\
+\}\
+\
+.container \{\
+    max-width: 1100px;\
+    margin: auto;\
+    overflow: hidden;\
+    padding: 0 2rem;\
+\}\
+\
+/* Header & Navigation */\
+header \{\
+    background: var(--white-color);\
+    box-shadow: var(--box-shadow);\
+    position: fixed;\
+    width: 100%;\
+    z-index: 1000;\
+\}\
+\
+nav \{\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: center;\
+    padding: 1rem 2rem;\
+\}\
+\
+.logo a \{\
+    font-size: 1.5rem;\
+    font-weight: 700;\
+    color: var(--secondary-color);\
+    text-decoration: none;\
+\}\
+\
+.nav-links \{\
+    display: flex;\
+    list-style: none;\
+\}\
+\
+.nav-links li \{\
+    padding-left: 20px;\
+\}\
+\
+.nav-links a \{\
+    text-decoration: none;\
+    color: var(--secondary-color);\
+    font-weight: 400;\
+    transition: color 0.3s ease;\
+\}\
+\
+.nav-links a:hover \{\
+    color: var(--primary-color);\
+\}\
+\
+/* Hero Section */\
+.hero \{\
+    height: 100vh;\
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?server,network') no-repeat center center/cover;\
+    color: var(--white-color);\
+    display: flex;\
+    justify-content: center;\
+    align-items: center;\
+    text-align: center;\
+    padding: 0 2rem;\
+\}\
+\
+.hero-content h1 \{\
+    font-size: 3rem;\
+    margin-bottom: 1rem;\
+\}\
+\
+.hero-content p \{\
+    font-size: 1.2rem;\
+    max-width: 600px;\
+    margin: 0 auto 2rem auto;\
+\}\
+\
+.cta-button \{\
+    display: inline-block;\
+    background: var(--primary-color);\
+    color: var(--white-color);\
+    padding: 12px 24px;\
+    text-decoration: none;\
+    border-radius: 5px;\
+    font-weight: 700;\
+    transition: background-color 0.3s ease;\
+    border: none;\
+    cursor: pointer;\
+\}\
+\
+.cta-button:hover \{\
+    background: #0056b3;\
+\}\
+\
+/* Content Sections */\
+.content-section \{\
+    padding: 6rem 0;\
+\}\
+\
+.bg-light \{\
+    background: var(--light-color);\
+\}\
+\
+.content-section h2 \{\
+    font-size: 2.5rem;\
+    text-align: center;\
+    margin-bottom: 1rem;\
+\}\
+\
+.section-subtitle \{\
+    text-align: center;\
+    font-size: 1.1rem;\
+    color: #666;\
+    margin-bottom: 3rem;\
+\}\
+\
+/* About Section */\
+.about-content \{\
+    display: flex;\
+    align-items: center;\
+    gap: 2rem;\
+\}\
+.about-text \{\
+    flex: 2;\
+\}\
+.about-text p \{\
+    margin-bottom: 1rem;\
+\}\
+.about-image \{\
+    flex: 1;\
+    text-align: center;\
+    color: var(--primary-color);\
+\}\
+\
+/* Services Section */\
+.services-grid \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+    gap: 2rem;\
+\}\
+\
+.service-card \{\
+    background: var(--white-color);\
+    padding: 2rem;\
+    border-radius: 8px;\
+    box-shadow: var(--box-shadow);\
+    text-align: center;\
+    transition: transform 0.3s ease, box-shadow 0.3s ease;\
+\}\
+\
+.service-card:hover \{\
+    transform: translateY(-10px);\
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);\
+\}\
+\
+.service-icon \{\
+    font-size: 3rem;\
+    color: var(--primary-color);\
+    margin-bottom: 1.5rem;\
+\}\
+\
+.service-card h3 \{\
+    margin-bottom: 1rem;\
+\}\
+\
+/* Why Us Section */\
+.why-us-grid \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\
+    gap: 2rem;\
+    text-align: center;\
+\}\
+\
+.why-us-item i \{\
+    font-size: 2.5rem;\
+    color: var(--primary-color);\
+    margin-bottom: 1rem;\
+\}\
+\
+.why-us-item h4 \{\
+    font-size: 1.2rem;\
+    margin-bottom: 0.5rem;\
+\}\
+\
+/* Contact Section */\
+.contact-wrapper \{\
+    display: flex;\
+    gap: 2rem;\
+    background: var(--white-color);\
+    padding: 2rem;\
+    border-radius: 8px;\
+    box-shadow: var(--box-shadow);\
+\}\
+.contact-info \{\
+    flex: 1;\
+\}\
+.contact-info h3 \{\
+    margin-bottom: 1rem;\
+\}\
+.contact-info p \{\
+    margin-bottom: 1rem;\
+    display: flex;\
+    align-items: center;\
+\}\
+.contact-info i \{\
+    color: var(--primary-color);\
+    margin-right: 10px;\
+\}\
+.contact-info a \{\
+    text-decoration: none;\
+    color: var(--text-color);\
+\}\
+\
+.contact-form \{\
+    flex: 2;\
+    display: flex;\
+    flex-direction: column;\
+\}\
+\
+.contact-form input,\
+.contact-form textarea \{\
+    width: 100%;\
+    padding: 10px;\
+    margin-bottom: 1rem;\
+    border: 1px solid #ddd;\
+    border-radius: 5px;\
+    font-family: inherit;\
+\}\
+\
+.form-notice \{\
+    text-align: center;\
+    margin-top: 1.5rem;\
+    font-size: 0.9rem;\
+    color: #555;\
+\}\
+.form-notice a \{\
+    color: var(--primary-color);\
+\}\
+\
+/* Footer */\
+footer \{\
+    background: var(--secondary-color);\
+    color: var(--white-color);\
+    text-align: center;\
+    padding: 2rem 0;\
+\}\
+\
+footer a \{\
+    color: var(--white-color);\
+    text-decoration: none;\
+\}\
+footer a:hover \{\
+    text-decoration: underline;\
+\}\
+\
+/* Mobile Menu */\
+.burger \{\
+    display: none;\
+    cursor: pointer;\
+\}\
+\
+.burger div \{\
+    width: 25px;\
+    height: 3px;\
+    background-color: var(--secondary-color);\
+    margin: 5px;\
+    transition: all 0.3s ease;\
+\}\
+\
+/* Responsive Design */\
+@media screen and (max-width: 768px) \{\
+    .nav-links \{\
+        position: absolute;\
+        right: 0px;\
+        height: 92vh;\
+        top: 8vh;\
+        background-color: var(--white-color);\
+        display: flex;\
+        flex-direction: column;\
+        align-items: center;\
+        width: 50%;\
+        transform: translateX(100%);\
+        transition: transform 0.5s ease-in;\
+    \}\
+    .nav-links li \{\
+        opacity: 0;\
+        padding: 20px 0;\
+    \}\
+    .burger \{\
+        display: block;\
+    \}\
+    .nav-active \{\
+        transform: translateX(0%);\
+    \}\
+\
+    @keyframes navLinkFade \{\
+        from \{\
+            opacity: 0;\
+            transform: translateX(50px);\
+        \}\
+        to \{\
+            opacity: 1;\
+            transform: translateX(0px);\
+        \}\
+    \}\
+\
+    .toggle .line1 \{\
+        transform: rotate(-45deg) translate(-5px, 6px);\
+    \}\
+    .toggle .line2 \{\
+        opacity: 0;\
+    \}\
+    .toggle .line3 \{\
+        transform: rotate(45deg) translate(-5px, -6px);\
+    \}\
+\
+    .hero-content h1 \{\
+        font-size: 2.2rem;\
+    \}\
+\
+    .about-content \{\
+        flex-direction: column;\
+    \}\
+    \
+    .contact-wrapper \{\
+        flex-direction: column;\
+    \}\
+\}}
